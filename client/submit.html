@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trout Tally</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+
+  <div id="nav2">
+    <div id="navWrapper">
+        <div id="logoDiv">
+            <a href="file:///Users/trevormedley/Desktop/Bright%20Paths/TroutTally/client/index.html"><img id="logo1" src="file:///Users/trevormedley/Desktop/Bright%20Paths/TroutTally/client/assets/logo.png"></a>
+        </div>
+        <div id="navItems">
+            <p class="navItem">About Us</p>
+            <p class="navItem">Trending</p>
+            <a href="file:///Users/trevormedley/Desktop/Bright%20Paths/TroutTally/client/submit.html"><button>Submit a Catch</button></a>  
+        </div>
+    </div>
+  </div> 
+
+  <section id="formSection">
+      <div class="sectionTitle">
+        <h3 class="sectionTitleText">Submit Your Catch</h3>
+      </div>
+      <div class="underline"></div>
+      <form onsubmit="return confirm('Your Catch Has Been Submitted!');">
+        <h5>Name</h5>
+        <input class="input" type="text" name="fullName" id="fullName">
+        <h5>Email</h5>
+        <input class="input" type="email" name="email" id="email">
+        <h5>River</h5>
+        <input class="input" type="text" name="river" id="river">
+        <h5>Fly Used</h5>
+        <input class="input" type="text" name="flyUsed" id="flyused">
+        <h5>Date Caught</h5>
+        <input class="input" type="date" name="date" id="date">
+        <h5>Property</h5>
+        <select class="input" name="property" id="property">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+        </select>
+        <h5>Image Link</h5>
+        <input class="input" type="url" name="imageURL" id="imageURL">
+        <h5>The Story</h5>
+        <textarea class="input" name="story" id="story" cols="30" rows="10"></textarea>
+        <br>
+        <div id="formButton">
+          <button id="formSubmit">Submit Your Catch!</button>
+        </div>
+    </form>
+  </section>
+
+  <footer>
+    <div id="footerImage">
+      <img id="footerImg" src="./assets/largeLogo.png" alt="Trout Tally">
+    </div>
+    <div id="linksDiv">
+      <div class="linksColumn">
+        <p class="linkItem">About Us<p>
+        <p class="linkItem">Submit a Catch</p>
+        <p class="linkItem">View all Posts</p>
+      </div>
+      <div class="linksColumn">
+        <p class="linkItem">Contact Us</p>
+        <p class="linkItem">Report a Bug</p>
+        <p class="linkItem">Request a Feature</p>
+      </div>
+    </div>
+    <div id="socialMedia">
+      <div>
+        <p class="linkItem">Social Media</p>
+      </div>
+      <div id="socialIcons">
+        <img class="icons" src="./assets/facebook.svg" alt="Facebook">
+        <img class="icons" src="./assets/instagram.svg" alt="Instagram">
+        <img class="icons" src="./assets/twitter.svg" alt="Twitter">
+        <img class="icons" src="./assets/youtube.svg" alt="Youtube">
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="submit.js"></script>
+
+</body>
+</html>
