@@ -348,12 +348,12 @@ footer {
 }
 
 #storySection{
-    height: 80vh;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 80px 0px;
 }
 
 #footerImg {
