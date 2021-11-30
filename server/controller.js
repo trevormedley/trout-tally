@@ -43,5 +43,5 @@ module.exports = {
             data[cardIndex].wows++
         }
         res.status(200).send(data);
-    }
+    },
 }

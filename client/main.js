@@ -1,5 +1,6 @@
 const recentlyCaughtSection = document.querySelector('#recentlyCaught')
 const form = document.querySelector('form')
+const weatherSection = document.querySelector('#weatherWrapper')
 
 const baseURL = `http://localhost:3333/api/trout/`
 
@@ -71,5 +72,59 @@ function displayCatchCards(arr) {
         createCatchCard(arr[i]);
     }
 }
+
+function gatherWeather() {
+    let cities = ['Grayling', 'Manistee', 'Muskegon', 'Ludington']
+    for (let i = 0; i < cities.length; i++) {
+        const getWeatherData = () => axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${cities[i]}&units=imperial&APPID=fccf3dfaa48624bebf4c1d12c38aa8e4`)
+        .then(function (res) {
+            let name = res.data.name
+            let temp = Math.round(res.data.main.temp)
+            let description = res.data.weather[0].description
+            let humidity = res.data.main.humidity
+            let windSpeed = res.data.wind.speed
+            let icon = res.data.weather[0].icon
+            let pressure = res.data.main.pressure
+
+            let weatherCard = document.createElement('div')
+            
+            weatherCard.innerHTML = `
+            <div class="weatherCard">
+                <div id="topWeatherCard">
+                    <h4>${name}</h4>
+                    <img class="weatherIcon" src="./assets/WeatherIcons/${icon}.svg" alt="Weather Icon">
+                </div>  
+                <div id="middleWeatherCard">
+                    <div id="tempDescription">
+                    <div id="temp">
+                        <h2 id="tempText">${temp}<sup>&#176;</sup></h2>
+                        <p class="weatherP">${description}</p>
+                    </div>
+                    </div>
+                </div>
+                <div id="bottomWeatherCard">
+                    <div class="weatherAttributes">
+                    <p>Wind</p>
+                    <h2>${windSpeed}<span> km</span></h2>
+                    </div>
+                    <div class="weatherAttributes">
+                    <p>RH</p>
+                    <h2>${humidity}<span>%</span></h2>
+                    </div>
+                    <div class="weatherAttributes">
+                    <p>atm</p>
+                    <h2>${pressure}</h2>
+                    </div>
+                </div>
+                </div>
+                `
+            
+            weatherSection.appendChild(weatherCard);
+        });
+        getWeatherData();
+    }
+}
+
+gatherWeather();
 
 getAllCatchCards();

@@ -415,16 +415,23 @@ i {
 }
 
 .weatherCard {
-    color: #3F4750;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 32px;
-    background: linear-gradient(59.64deg, rgba(234, 243, 249, 0.25) 0%, rgba(207, 230, 247, 0.25) 0.01%, rgba(124, 179, 218, 0.25) 100%);
-    border: 1px solid #3F4750;
-    box-sizing: border-box;
-    border-radius: 16px;
-    width: 260px;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: rgba(27, 133, 209, 0.59);
+    border-radius: 24px;
+    width: 250px;
+}
+
+#topWeatherCard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
 }
 
 #middleWeatherCard {
@@ -432,9 +439,10 @@ i {
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    margin: 16px 0px;
+    margin: 8px 0px 16px 0px;
+    text-align: center;
 }
 
 #bottomWeatherCard {
@@ -448,18 +456,18 @@ i {
 
 .weatherAttributes {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 0px;
+    width: 60px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
 
 .weatherSmallIcon {
     margin-right: 8px;
-}
-
-.weatherCard > h4 {
-    font-size: 24px;
-    font-weight: 400;
 }
 
 #tempText {
@@ -492,3 +500,59 @@ i {
     align-items: center;
     padding: 0px;    
 }
+
+.weatherIcon {
+    width: 40px;
+}
+
+.weatherAttributes p {
+    margin-bottom: 4px;
+    color: white;
+    font-size: 10px;
+    line-height: 106.3%;
+    text-align: center;
+}
+
+.weatherAttributes span {
+    color: white;
+    font-weight: 200;
+    font-size: 10px;
+    line-height: 106.3%;
+    text-align: center;
+}
+
+.weatherAttributes h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 106.3%;
+}
+
+#tempDescription h2 {
+    color: white;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 106.3%;
+}
+
+#tempDescription p {
+    color: rgba(255, 255, 255, 0.699);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 106.3%;
+}
+
+#topWeatherCard h4 {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 106.3%;  
+}
+
+#tempDescription sup {
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 106.3%;
+}
+
