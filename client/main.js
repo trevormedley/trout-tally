@@ -19,7 +19,7 @@ function createCatchCard(data) {
     const catchCard = document.createElement('div');
     
     catchCard.innerHTML = `      
-    <div class="catchCard">
+    <article class="catchCard">
             <div id="imgDiv">
                 <img id="catchImg" src=${data.imageURL}>
             </div>
@@ -61,7 +61,7 @@ function createCatchCard(data) {
               <p id="storyLink">View Story <i id="chevronRight" class="fas fa-chevron-right"></i></p>
           </div>
           </div>
-      </div>`
+      </article>`
 
   recentlyCaughtSection.appendChild(catchCard);
 }
