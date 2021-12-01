@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Trout Tally is an interactive website for Michiganders to post their catches on!
+> Trout Tally is an interactive website for Michiganders to post their catches on! Users can post their recently caught fish, react to other's posts, and even see the weather for top highly sought after fishing locations. 
 
 ### 🏠 [Homepage](file:///Users/trevormedley/Desktop/Bright%20Paths/TroutTally/client/index.html)
 
