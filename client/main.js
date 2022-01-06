@@ -1,9 +1,12 @@
+//Creating variables for areas on the DOM
 const recentlyCaughtSection = document.querySelector('#recentlyCaught')
 const form = document.querySelector('form')
 const weatherSection = document.querySelector('#weatherWrapper')
 
 const baseURL = `http://localhost:3333/api/trout/`
 
+
+//Need a little insight on what these lines of code are doing
 const dataCallback = ({ data: fish }) => displayCatchCards(fish)
 const errCallback = err => console.log(err.response.data)
 
@@ -15,6 +18,7 @@ const updateCard = (id, type) => axios.put(`${baseURL}${id}`, {type})
     .then(dataCallback)
     .catch(errCallback)
 
+//This funciton is creating the DIV element that houses each post    
 function createCatchCard(data) {
     const catchCard = document.createElement('div');
     
@@ -65,13 +69,16 @@ function createCatchCard(data) {
 
   recentlyCaughtSection.appendChild(catchCard);
 }
-
+//This function is running a for loop to display the 'CatchCard' for each object.
 function displayCatchCards(arr) {
     recentlyCaughtSection.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
         createCatchCard(arr[i]);
     }
 }
+
+
+// This funciton is gathering weather data from 4 of the prominent fly fishing areas in the state of Michigan using the OpenWeatherMap API. Once the information is gathered, a DIV is created to house the information, and then those DIVS are appended to the weatherSection DIV.
 
 function gatherWeather() {
     let cities = ['Grayling', 'Manistee', 'Muskegon', 'Ludington']

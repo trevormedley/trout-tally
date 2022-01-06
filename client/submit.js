@@ -2,6 +2,7 @@ const form = document.querySelector('form')
 
 const baseURL = `http://localhost:3333/api/trout/`
 
+// In this function, I first created variabels for all the input fields in the form. Then I created a BodyObj that will house the values of each the inputs. We then call the createCard function with the new BodyObj passed in.
 
 function submitHandler (e) {
 
