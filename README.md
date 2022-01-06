@@ -16,6 +16,12 @@
 npm install
 ```
 
+## Start Server
+
+```sh
+node server
+```
+
 ## Run tests
 
 ```sh
